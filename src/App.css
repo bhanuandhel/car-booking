@@ -1,0 +1,349 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navColor{
+  background-color: #c50a2c;
+}
+
+.spanFont{
+  font-size: 10px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.fisrtRow span {
+  font-weight: bold;
+}
+
+.secondRow {
+  background-color: #eae7e7;
+  padding: 4px;
+}
+
+.secondRow span {
+  color: #c50a2c;
+}
+.secondRow p {
+  font-size: 10px;
+  margin: 0px !important;
+}
+
+.carimg span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.maplocationButton {
+  border: 1px solid;
+   border-radius:2px;
+}
+
+.leftButton{
+  width:100%;
+  border-radius:0px !important;
+  background-color:#c50a2c !important;
+  border-color:#c50a2c !important
+}
+
+.rightButton{
+  width:100%;
+  border-radius:0px !important;
+  background-color:#eae7e7 !important;
+  border-color:#fff !important;
+  color:#000 !important
+}
+
+.modal-body{
+  padding-bottom: 0px !important;
+  /* padding: 0px !important; */
+}
+
+.modal .modal-dialog {
+  transform: translate3d(0, 67%, 0) !important;
+  margin: 0px;
+}
+.modal.in .modal-dialog {
+  transform: translate3d(0, 0, 0) !important;
+}
+.modal-content{
+  background-color:#f3f4f6 !important;
+}
+
+/* payment modal  */
+.modal-lg .modal-content{
+  background-color:#ffffff !important;
+}
+
+.fade .modal-lg {
+  transform: translate3d(0, 0%, 0) !important;
+  margin: 0px;
+}
+.modal-lg .modal-content .modal-body{
+  padding: 0px !important;
+}
+
+.modal-lg .modal-content .modal-header .close {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.modal-lg .modal-header {
+  border-bottom: none;
+}
+
+.forminput{
+  padding: 0px 5px !important;
+}
+
+.forminput input[type="text"]{
+  background-color:#f3f4f6 !important
+  }
+
+  .forminput ::-webkit-input-placeholder {
+    font-size: 12px!important;
+ }
+
+ .booking-placeholder ::-webkit-input-placeholder {
+  font-size: 12px!important;
+}
+
+.form-group{
+  margin-bottom: 5px !important;
+}
+
+.forminput .form-control{
+  height: 30px !important;
+  padding: 0px 11px !important;
+}
+
+.form-check-input-radio {
+  margin-top: 10px !important;
+}
+
+
+.locationhead {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.locationhead .col-md-4 {
+  text-align: right;
+}
+
+.textfield-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red !important;
+  opacity: 1 /* Firefox */
+}
+
+.glyphicon { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red !important;
+  opacity: 1 /* Firefox */
+}
+
+.vl {
+  border-top: 2px solid #adb5bd !important;
+}
+
+.v2 {
+  border-right: 1px solid #fff;
+}
+
+.confirmboxclass{
+  background-color: #fd0100 !important;
+  border-color: #fd0100 !important;
+  color:#fff;
+  width: 100%;
+}
+
+.text-center .fa-money-bill{
+  color: green;
+  font-size: 25px;
+}
+
+.v2 #span1 {
+  font-size:12px;
+  font-weight:bold;
+}
+
+.v2 #span2 {
+  font-size:10px;
+  font-weight:bold;
+}
+
+.v2 #span3 {
+  font-size:10px;
+}
+.v3,.v2 {
+  line-height: 14px !important;
+}
+.v3 #span1 {
+  font-size: 6px;
+}
+
+.v3 #span2 {
+  font-size:12px;
+  font-weight:bold;
+}
+.carlog{
+  width: 108%;
+  padding-top: 15px;
+}
+
+.topcolorheader {
+  background-color: #010101;
+}
+
+.topcolorheader img{
+  width: 60%;
+}
+
+.payment-padding{
+    font-size: 25px;
+}
+
+.close span {
+  font-size: 50px;
+    color: #000;
+}
+
+
+.landing-page {
+  background-color: #f7f7f9;
+
+}
+
+.landing-page .v2 {
+  border-right: none;
+}
+
+.landing-page .imgcss {
+  margin-top: -17px;
+  width: 102%;
+  margin-left: -4px;
+}
+
+.second-landing-div{
+  background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.second-landing-div p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+.list-group-item-padding{
+  border: none !important;
+  padding: 5px 1.25rem !important;
+  font-size: 12px;
+}
+
+.card-body-landing{
+  padding: 0px !important;
+}
+
+.image-landing-page{
+  width: 101%;
+  margin-top: -1px;
+}
+
+.payment-list{
+  padding-top: 10px;
+}
+
+
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 40px; }
+
+.maptext {
+  margin: 1px !important;
+    max-width: 65% !important;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+  .landing-page .imgcss {
+    margin-top: -17px;
+    width: 104%;
+    margin-left: -13px;
+    margin-right: -8px;
+}
+
+.image-landing-page {
+  width: 101%;
+  margin-top: -20px;
+  margin-left: -27px;
+  margin-right: -24px;
+}
+
+.carlog {
+  width: 65%;
+  padding-top: 15px;
+}
+
+.maptext {
+  margin: 1px !important;
+    max-width: 66% !important;
+    font-weight: bold;
+}
+
+}
