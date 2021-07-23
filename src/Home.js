@@ -8,6 +8,7 @@ import SimpleMap from './SimpleMap';
 import SignIn from './SignIn'
 const Home = () => {
     const [modalShow, setModalShow] = useState(false);
+    const [selectCar, setSelectCar] = useState('M');
 
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -17,7 +18,7 @@ const Home = () => {
         <Container fluid>
         <Row className="p-1 navColor">
           <Col xs={6} md={6} className="text-left">
-            <img src={logo} />
+            <img alt="img" src={logo} />
           </Col>
           <Col xs={6} md={6} className="text-right spanFont">
             <span>MOBILE BOARDING PASS</span>
@@ -76,17 +77,17 @@ const Home = () => {
         </Col>
         </Row>
         <Row>
-          <Col xs={4} md={4} style={{display:"flex"}}>
-          <Form.Check type="radio" aria-label="radio 1" checked={true} className="form-check-input-radio" />
-          <img src={img1} />
+          <Col xs={4} md={4} style={{display:"flex"}} onClick={()=>{setSelectCar('M')}}>
+          <Form.Check type="radio" aria-label="radio 1" checked={selectCar==='M'?true:false}  className="form-check-input-radio" onChange={()=>{setSelectCar('M')}} />
+          <img alt="img" src={img1} />
           </Col>
-          <Col xs={4} md={4} style={{display:"flex"}}>
-          <Form.Check type="radio" aria-label="radio 1" className="form-check-input-radio" />
-          <img src={img2} />
+          <Col xs={4} md={4} style={{display:"flex"}}  onClick={()=>{setSelectCar('L')}}>
+          <Form.Check type="radio" aria-label="radio 1" checked={selectCar==='L'?true:false} className="form-check-input-radio" onChange={()=>{setSelectCar('L')}} />
+          <img alt="img" src={img2} />
           </Col>
-          <Col xs={4} md={4} style={{display:"flex"}}>
-          <Form.Check type="radio" aria-label="radio 1" className="form-check-input-radio" />
-          <img src={img3} />
+          <Col xs={4} md={4} style={{display:"flex"}} onClick={()=>{setSelectCar('X')}}>
+          <Form.Check type="radio" aria-label="radio 1" checked={selectCar==='X'?true:false}  className="form-check-input-radio" onChange={()=>{setSelectCar('X')}} />
+          <img alt="img" src={img3} />
           </Col>
           
         </Row>

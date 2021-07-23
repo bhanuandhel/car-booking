@@ -39,34 +39,34 @@ const PaymentOptions = (props) => {
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                        <img src={cash} />
+                        <img alt="img"  src={cash} />
                     </Col>
                     <Col xs={8} md={8} className="pb-10 text-left border-bottom payment-list" >
                        <span>Cash</span> 
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list">
-                    <i class="fas fa-check"></i>
+                    <i className="fas fa-check"></i>
                     </Col>
 
                 </Row>
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                    <img src={amazon} />
+                    <img alt="img"  src={amazon} />
                     </Col>
                     <Col xs={8} md={8} className=" pb-10 pl-3 text-left border-bottom payment-list" >
                         Amazon Pay
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list">
 
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
 
                 </Row>
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                    <img src={createdanddabit} />
+                    <img alt="img"  src={createdanddabit} />
 
                     </Col>
                     <Col xs={8} md={8} className=" pb-10 pl-3 text-left border-bottom payment-list">
@@ -74,20 +74,20 @@ const PaymentOptions = (props) => {
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list">
 
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
 
                 </Row>
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                    <img src={paytm} />
+                    <img alt="img"  src={paytm} />
                     </Col>
                     <Col xs={8} md={8} className=" pb-10 pl-3 text-left border-bottom payment-list" >
                         Paytm
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list">
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
 
                 </Row>
@@ -100,28 +100,28 @@ const PaymentOptions = (props) => {
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                    <img src={lazypay} />
+                    <img alt="img"  src={lazypay} />
                     </Col>
                     <Col xs={8} md={8} className=" pb-10 pl-3 text-left border-bottom payment-list" >
                         Lazypay
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list" >
 
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
 
                 </Row>
 
                 <Row className="pl-2 pt-2 pr-2" onClick={gotolandingpage}>
                     <Col xs={2} md={2} className="text-right payment-padding" >
-                    <img src={simple} />
+                    <img alt="img"  src={simple} />
                     </Col>
                     <Col xs={8} md={8} className=" pb-10 pl-3 text-left border-bottom payment-list" >
                         Siiple
                     </Col>
                     <Col xs={2} md={2} className="text-center border-bottom payment-list" >
 
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
 
                 </Row>

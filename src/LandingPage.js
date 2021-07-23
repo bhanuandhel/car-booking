@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 
 
 const LandingPage = () => {
-    let history = useHistory()
+    let history = useHistory();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -25,9 +25,9 @@ const LandingPage = () => {
             </Row>
             <Row className="mt-2 pt-2 pb-1 ml-1 mr-1 landing-page">
 
-                <img src={tophaderdot} className="imgcss" />
+                <img alt="img"  src={tophaderdot} className="imgcss" />
                 <Col xs={3} md={3} className="v2" >
-                    <img src={landingcar} className="carlog" />
+                    <img alt="img"  src={landingcar} className="carlog" />
                 </Col>
                 <Col xs={6} md={6} className="v2">
                     <span id="span1" >Meru Airport Transport</span><br />
@@ -97,7 +97,7 @@ const LandingPage = () => {
                 </Col>
             </Row>
             <Row className="ml-1 mr-1 justify-content-center">
-                <img src={bottomdot} className="image-landing-page" />
+                <img alt="img"  src={bottomdot} className="image-landing-page" />
             </Row>
 
         </Container>

@@ -5,24 +5,35 @@ import spicejetscreenblack from './img/spicejetscreenblack.png';
 import carlog from './img/carlog.png';
 import SimpleMap from './SimpleMap';
 import PaymentOptions from './PaymentOptions';
+import { useHistory } from "react-router-dom";
+
 
 
 
 const ConfirmLocation = () => {
     const [lgShow, setLgShow] = useState(false);
+    let history = useHistory();
 
+    const gotobackpage = (e) => {
+        history.goBack();
+    }
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
 
     return (
         <Container fluid className="p-0" style={{overflowX:"hidden"}}>
+            <Row className="pl-2 topcolorheader">
+                <Col xs={12} md={12} className="text-left">
+                    <i className="fas fa-arrow-left text-white" onClick={gotobackpage}></i>
+                </Col>
+            </Row>
             <Row className="p-0 m-0 topcolorheader">
                 <Col xs={6} md={6} className="text-left">
-                    <img src={spicejetscreenblack} />
+                    <img alt="img"  src={spicejetscreenblack} />
                 </Col>
                 <Col xs={6} md={6} className="text-right">
-                    <img src={spicejetblack} />
+                    <img alt="img"  src={spicejetblack} />
                 </Col>
             </Row>
             <Row className="locationhead">
@@ -37,23 +48,23 @@ const ConfirmLocation = () => {
             </Row>
 
             <div className="card  mx-auto shadow mb-1 bg-body rounded">
-                <SimpleMap hight='35vh' />
+                <SimpleMap hight='31vh' />
             </div>
 
             <div className="card  mx-auto shadow bg-body rounded">
                 <div className="card-body pb-0">
                     <Row>
                         <Col xs={12} md={12}>
-                            <div class="inner-addon right-addon booking-placeholder">
-                                <i class="fa fa-search glyphicon glyphicon-search"></i>
-                                <input type="text" class="form-control textfield-input shadow rounded" placeholder="Booking ID not found" onChange={e => console.log(e)} />
+                            <div className="inner-addon right-addon booking-placeholder">
+                                <i className="fa fa-search glyphicon glyphicon-search"></i>
+                                <input type="text" className="form-control textfield-input shadow rounded" placeholder="Booking ID not found" onChange={e => console.log(e)} />
                             </div>
                         </Col>
                     </Row>
 
                     <Row className="mt-3 pt-3 pb-3" style={{ backgroundColor: "#fe5051" }}>
                         <Col xs={3} md={3} className="v2" >
-                            <img src={carlog} className="carlog" />
+                            <img alt="img"  src={carlog} className="carlog" />
                         </Col>
                         <Col xs={6} md={6} className="v2">
                             <span id="span1" className="text-white">Meru Airport Transport</span><br />
@@ -74,13 +85,13 @@ const ConfirmLocation = () => {
             <div className="card  mx-auto shadow bg-body rounded vl">
                 <Row className="pt-2 pb-2" onClick={() => setLgShow(true)}>
                     <Col xs={3} md={3} className="text-center" >
-                        <i class="fas fa-money-bill"></i>
+                        <i className="fas fa-money-bill"></i>
                     </Col>
                     <Col xs={6} md={6} className="text-left carimg">
                         <span>Cash</span>
                     </Col>
                     <Col xs={3} md={3} className="text-center">
-                        <i class="fas fa-angle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </Col>
                 </Row>
                 <Row className="justify-content-center pb-2">

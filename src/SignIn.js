@@ -10,17 +10,22 @@ const SignIn = (props) => {
     let history = useHistory()
     const { setmodalshow } = props;
 
-    const init = { from: "", to: "", firstName: "", lastName: "", gender: "mr", email: "", mobile: "", DOB: "", STD: "" }
+    const init = { from: "", to: "", firstName: "", lastName: "", gender: "mrs", email: "", mobile: "", DOB: "", STD: "" }
     const [formValue, setFormValue] = useState(init);
 
     const AutofillAction = (e) => {
-        setFormValue({ from: "Noida", to: "Delhi", firstName: "bhanu", lastName: "pratap", gender: "ms", email: "bhanu@gmail.com", mobile: "9758760136", DOB: "22-7-2021", STD: "05:45 AM" })
+        setFormValue({ from: "Noida", to: "Delhi", firstName: "bhanu", lastName: "pratap", gender: "mr", email: "bhanu@gmail.com", mobile: "9758760136", DOB: "22-7-2021", STD: "05:45 AM" })
     }
 
     const ClosePopup = (e) => {
         setFormValue(init)
         setmodalshow(false)
         history.push('/confirm-location')
+    }
+
+    const changeGander = (e) =>{
+        // console.log(e)
+       setFormValue({...formValue, 'gender':e})
     }
 
     return (
@@ -30,10 +35,10 @@ const SignIn = (props) => {
                 <Container fluid className="p-0">
                     <Row className="p-0">
                         <Col xs={6} md={6} className="text-left">
-                            <img src={spicescreen} />
+                            <img alt="img"  src={spicescreen} />
                         </Col>
                         <Col xs={6} md={6} className="text-right">
-                            <img src={spicejectlogo} />
+                            <img alt="img"  src={spicejectlogo} />
                         </Col>
                     </Row>
                     <Row>
@@ -71,33 +76,34 @@ const SignIn = (props) => {
                         </Row>
 
                         <Row>
+                        <Col xs={2} md={2} className="forminput">
+                                <Form.Group controlId="formBasicmrs">
+                                    <Form.Check
+                                        type='radio'
+                                        label={`Mrs.`}
+                                        checked={formValue.gender === 'mrs' ? true : false}
+                                        onChange={()=>changeGander('mrs')}
+                                    />
+                                </Form.Group>
+                            </Col>
                             <Col xs={2} md={2} className="forminput">
                                 <Form.Group controlId="formBasicmr">
                                     <Form.Check
                                         type='radio'
-                                        label={`Mr`}
+                                        label={`Mr.`}
                                         checked={formValue.gender === 'mr' ? true : false}
-                                        onChange={e => console.log(e)}
+                                        onChange={()=>changeGander('mr')}
                                     />
                                 </Form.Group>
                             </Col>
-                            <Col xs={2} md={2} className="forminput">
-                                <Form.Group controlId="formBasicmrs">
-                                    <Form.Check
-                                        type='radio'
-                                        label={`Mrs`}
-                                        checked={formValue.gender === 'mrs' ? true : false}
-                                        onChange={e => console.log(e)}
-                                    />
-                                </Form.Group>
-                            </Col>
+                            
                             <Col xs={2} md={2} className="forminput">
                                 <Form.Group controlId="formBasicms">
                                     <Form.Check
                                         type='radio'
-                                        label={`Ms`}
+                                        label={`Ms.`}
                                         checked={formValue.gender === 'ms' ? true : false}
-                                        onChange={e => console.log(e)}
+                                        onChange={()=>changeGander('ms')}
                                     />
                                 </Form.Group>
                             </Col>
@@ -132,13 +138,13 @@ const SignIn = (props) => {
                             </Col>
                         </Row>
 
-                        {formValue.firstName == '' ?
+                        {formValue.firstName === '' ?
                             <Row>
                                 <Col xs={6} md={6} className="p-0">
                                     <Button className="leftButton" onClick={AutofillAction}>AUTO FILL</Button>
                                 </Col>
                                 <Col xs={6} md={6} className="p-0 text-center">
-                                    <Link onClick={(e) => { setmodalshow(false) }}>I WILL ENTER</Link>
+                                    <Link to="" onClick={(e) => { setmodalshow(false) }}>I WILL ENTER</Link>
                                 </Col>
                             </Row>
                             :
